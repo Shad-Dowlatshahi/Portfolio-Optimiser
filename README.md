@@ -64,16 +64,14 @@ rigour, which is precisely the failure mode *An Introduction to
 Statistical Learning* warned against.
 
 **Why long-only?**
-Simplicity and interpretability. Short positions introduce leverage 
-and complexity that the current signal set does not justify.
+Simplicity and interpretability.
 
 ---
 
 ## Out-of-Sample Backtest
 
 To evaluate the model honestly, signals were calculated using only 
-training data and applied to unseen test periods — avoiding look-ahead 
-bias. Three market regimes were tested:
+training data and applied to unseen test periods. Three market regimes were tested:
 
 | Period | Training Data | Test Period |
 |--------|--------------|-------------|
@@ -108,13 +106,6 @@ systematically hit fixed income assets — a risk the volatility signal
 does not capture, since bonds had historically low volatility in the 
 training data.
 
-These results illustrate both the coherence and the limits of 
-signal-based allocation. The model behaves predictably given its 
-design, but no signal set is robust across all market regimes — 
-consistent with the bias-variance intuition that simple, interpretable 
-models generalise better than complex ones, but still face irreducible 
-out-of-sample uncertainty.
-
 ---
 
 ## Limitations
@@ -128,14 +119,6 @@ out-of-sample uncertainty.
   behaviour is sensitive to which assets are included
 - Transaction costs and rebalancing frequency are not modelled
 
----
-
-## Dependencies
-
-- yfinance
-- pandas
-- numpy
-- matplotlib
 
 
 
